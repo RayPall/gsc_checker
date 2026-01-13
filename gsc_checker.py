@@ -5,7 +5,7 @@ import pandas as pd
 # Replace this with your actual Make Webhook URL
 MAKE_WEBHOOK_URL = "https://hook.eu2.make.com/86v6dhdxc6sc00up9cmjd8nqoypa1gpk"
 
-st.title("Send URL to Make Webhook")
+st.title("GSC Quick Checker")
 
 user_url = st.text_input("Enter the URL to send:")
 
