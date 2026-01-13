@@ -53,7 +53,7 @@ if 'response_data' in st.session_state and st.session_state.response_data:
             df = None
         
         if df is not None:
-            st.dataframe(df, use_container_width=True)
+            st.dataframe(df, use_container_width=True, hide_index=True)
     except Exception as e:
         # If conversion fails, fall back to JSON display
         st.json(st.session_state.response_data)
