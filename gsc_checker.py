@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 
 # Replace this with your actual Make Webhook URL
-MAKE_WEBHOOK_URL = "https://hook.eu2.make.com/86v6dhdxc6sc00up9cmjd8nqoypa1gpk"
+MAKE_WEBHOOK_URL = "https://hook.us1.make.com/your_webhook_id"
 
 st.title("Send URL to Make Webhook")
 
@@ -21,3 +21,6 @@ if st.button("Send to Make"):
             st.error(f"An error occurred: {e}")
     else:
         st.warning("Please enter a URL before submitting.")
+        if 'response_data' in locals() and response_data:
+            st.write("Webhook response data:")
+            st.json(response_data)
