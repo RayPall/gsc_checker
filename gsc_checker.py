@@ -9,7 +9,7 @@ st.title("GSC Quick Checker")
 
 user_url = st.text_input("Enter the URL to send:")
 
-if st.button("Send to Make"):
+if st.button("Send"):
     if user_url:
         payload = {"url": user_url}
         try:
