@@ -15,12 +15,17 @@ if st.button("Send to Make"):
             response = requests.post(MAKE_WEBHOOK_URL, json=payload)
             if response.status_code == 200:
                 st.success("URL successfully sent to Make!")
+                try:
+                    st.session_state.response_data = response.json()
+                except:
+                    st.session_state.response_data = response.text
             else:
                 st.error(f"Failed to send. Status code: {response.status_code}")
         except Exception as e:
             st.error(f"An error occurred: {e}")
     else:
         st.warning("Please enter a URL before submitting.")
-if 'response_data' in locals() and response_data:
+
+if 'response_data' in st.session_state and st.session_state.response_data:
     st.write("Webhook response data:")
-    st.json(response_data)
+    st.json(st.session_state.response_data)
