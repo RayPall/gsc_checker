@@ -21,6 +21,6 @@ if st.button("Send to Make"):
             st.error(f"An error occurred: {e}")
     else:
         st.warning("Please enter a URL before submitting.")
-        if 'response_data' in locals() and response_data:
-            st.write("Webhook response data:")
-            st.json(response_data)
+if 'response_data' in locals() and response_data:
+    st.write("Webhook response data:")
+    st.json(response_data)
