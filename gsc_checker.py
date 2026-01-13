@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 
 # Replace this with your actual Make Webhook URL
-MAKE_WEBHOOK_URL = "https://hook.us1.make.com/your_webhook_id"
+MAKE_WEBHOOK_URL = "https://hook.eu2.make.com/86v6dhdxc6sc00up9cmjd8nqoypa1gpk"
 
 st.title("Send URL to Make Webhook")
 
